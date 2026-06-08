@@ -368,6 +368,117 @@ ul {
   bottom: -3rem;
 }
 
+/* ── Download CTA ── */
+
+.download-cta {
+  padding: 0 0 var(--section-gap);
+}
+
+.container--wide {
+  max-width: 1400px;
+  padding-inline: 0.75rem;
+}
+
+.download-card {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/img/swapactivity.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.download-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 71, 79, 0.88) 0%,
+    rgba(31, 139, 141, 0.75) 50%,
+    rgba(15, 71, 79, 0.85) 100%
+  );
+}
+
+.download-card__content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 1.75rem;
+  max-width: 42rem;
+  margin-inline: auto;
+  color: var(--color-white);
+}
+
+.download-card__content h2 {
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.download-card__content p {
+  font-size: 1rem;
+  line-height: 1.65;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+}
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  min-height: 52px;
+  background: var(--color-black);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  color: var(--color-white);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.store-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  background: #1a1a1a;
+}
+
+.store-badge img {
+  flex-shrink: 0;
+}
+
+.store-badge__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.store-badge__label {
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+.store-badge__name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
 /* ── Footer ── */
 
 .site-footer {
@@ -664,6 +775,18 @@ ul {
 
   .features {
     padding: 4rem 0;
+  }
+
+  .container--wide {
+    padding-inline: 2rem;
+  }
+
+  .download-card {
+    min-height: 380px;
+  }
+
+  .download-card__content {
+    padding: 4rem 3rem;
   }
 
   .feature-card {
